@@ -1,8 +1,8 @@
 import React from "react";
 
 
-function MyComponent(props){
-  return <div>{props.title}</div>;
+function MyComponent({ title }){
+  return <div>{title}</div>;
 }
 
 export default MyComponent;
