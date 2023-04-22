@@ -5,9 +5,8 @@ import MyComponent from './MyComponent';
 function App(){
   return(
     <div>
-      <MyComponent 
-      title="Hello World!" />
-    </div>
+      <MyComponent />
+          </div>
   )
 }
 
