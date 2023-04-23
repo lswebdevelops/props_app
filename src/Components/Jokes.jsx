@@ -1,20 +1,17 @@
-import '../Styles/Jokes.css';
 import React from 'react';
+import '../Styles/Jokes.css';
 
-class Jokes extends React.Component{
-  render(){
-   
-    const { setup, punchline} = this.props;
-    return(
-      <div>
-        {/* if setup exists, so is truffy */}
-        {setup && <h1 
-        style={{display: setup ? "block": "none"}}>{setup}</h1>}
-        {punchline && <p
-         style={{display:punchline ? "block": "none"}}>{punchline}</p>}
-         <hr />
+class Jokes extends React.Component {
+  render() {
+    const { setup, punchline } = this.props;
+    return (
+      <div className="joke-container">
+        {setup && <h1 className="joke-setup">{setup}</h1>}
+        {punchline && <p className="joke-punchline">{punchline}</p>}
+        <hr />
       </div>
     )
   }
 }
+
 export default Jokes;
