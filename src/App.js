@@ -1,19 +1,16 @@
 import './App.css';
 import React from "react";
-import Jokes from './Components/Jokes';
-import jokesData from './Components/JokesData';
+import Header from './Components/Header';
+import Body from './Components/Body';
+
 function App(){
-  const jokeElements = jokesData.map(joke =>{
-    return(
-      <Jokes
-      setup={joke.setup} 
-      punchline={joke.punchline}
-       />
-    )
-  })
+const [user, setUser] = React.useState("Davi")
   return(
     <div>
-        {jokeElements}
+       <Header
+       user={user} />
+       <Body
+       user={user} />
     </div>
     )
 }
