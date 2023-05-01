@@ -1,17 +1,29 @@
 import './App.css';
 import React from "react";
-import Header from './Components/Header';
-import Body from './Components/Body';
+import boxes from './Components/Boxes';
 
 function App(){
-const [user, setUser] = React.useState("Davi")
+ 
+ const [squares, setSquares] = React.useState(boxes);
+
+ const styles = {
+  backgroundColor: "beige"
+ }
+  const boxElements = boxes.map(item =>(
+    <div 
+    style={styles}
+    className='box'
+    key={item.id}
+    > </div>
+
+  )
+
+ )
+
   return(
     <div>
-       <Header
-       user={user} />
-       <Body
-       user={user} />
-    </div>
+       {boxElements}
+       </div>
     )
 }
 export default App;
