@@ -1,29 +1,23 @@
+
 import './App.css';
 import React from "react";
-import boxes from './Components/Boxes';
+import Box from './Components/Box';
+import boxes from './Data/dataBoxes';
 
 function App(){
- 
- const [squares, setSquares] = React.useState(boxes);
-
- const styles = {
-  backgroundColor: "beige"
- }
-  const boxElements = boxes.map(item =>(
-    <div 
-    style={styles}
-    className='box'
-    key={item.id}
-    > </div>
-
-  )
-
- )
+  const [squares, setSquares] = React.useState(boxes);
+  const squaresElements = squares.map(square =>(
+    <Box
+    key={square.id}
+    on={square.on}
+    emoji={square.emoji}
+    />
+  ))
 
   return(
     <div>
-       {boxElements}
-       </div>
+      {squaresElements}
+    </div>
     )
 }
 export default App;
