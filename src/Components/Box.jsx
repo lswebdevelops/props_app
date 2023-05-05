@@ -1,4 +1,4 @@
-import boxes from '../Data/dataBoxes';
+
 import React from 'react';
 import '../Styles/Box.css';
 
@@ -12,7 +12,7 @@ function Box(props){
     <div 
       style={styles}
       className="box"
-      onClick={() => props.handleToggle(props.id)}
+      onClick={props.handleToggle}
 
       >{props.emoji}</div>
   )
