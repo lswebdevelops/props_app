@@ -1,33 +1,20 @@
-
 import './App.css';
 import React from "react";
-import Box from './Components/Box';
-import boxes from './Data/dataBoxes';
-
+import Jokes from './Components/Jokes';
+import jokesData from './Data/jokesData';
 function App(){
-  const [squares, setSquares] = React.useState(boxes);
- 
-  function toggle(id){
-    setSquares(prevStatus =>{
-      return prevStatus.map((square) =>{
-      return square.id === id ? {...square, on: !square.on}: square
-      })
-    })      
-  }
-
-  const squaresElements = squares.map(square =>(
-    <Box
-    key={square.id}
-    on={square.on}
-    emoji={square.emoji}
-    handleToggle={() =>toggle(square.id)}
-    />
-  ))
-
+  const jokeElements = jokesData.map(joke =>{
+    return(
+      <Jokes
+      setup={joke.setup} 
+      key={joke.id}
+      punchline={joke.punchline}
+       />
+    )
+  })
   return(
-    <div >
-
-      {squaresElements}
+    <div>
+        {jokeElements}
     </div>
     )
 }
