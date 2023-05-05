@@ -9,13 +9,18 @@ function App(){
   const squaresElements = squares.map(square =>(
     <Box
     key={square.id}
+    id={square.id}
     on={square.on}
     emoji={square.emoji}
+    handleClick={toggle}
     />
   ))
-
+  function toggle(id){
+    console.log(id);
+    }
   return(
-    <div>
+    <div >
+
       {squaresElements}
     </div>
     )

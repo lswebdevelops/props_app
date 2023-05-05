@@ -6,16 +6,15 @@ function Box(props){
   const [on, setOn]= React.useState(props.on);
 
   const styles={
-    backgroundColor: on? "#222222": "transparent"
+    backgroundColor: on? "#555555": "transparent"
   }
-  function toggleBackground(){
-    setOn(prevOn=> !prevOn)
-  }
-  return(
+
+ return(
     <div 
       style={styles}
       className="box"
-      onClick={toggleBackground}
+      onClick={() => props.handleClick(props.id)}
+
       >{props.emoji}</div>
   )
         }
