@@ -11,13 +11,14 @@ function Jokes(props) {
 
   return (
     <div>
-      <h3>{props.setup}</h3>
+      {props.setup && <h3>{props.setup}</h3>}
       <div>
+        {isShown && <p>{props.punchline}</p>}
         <button onClick={toggleShown}>
           {isShown ? <FaRegEyeSlash /> : <FaRegEye />}
-          </button>
-        {isShown && <p>{props.punchline}</p>}
+        </button>
       </div>
+      <hr />
     </div>
   );
 }

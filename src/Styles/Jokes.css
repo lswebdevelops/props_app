@@ -1,17 +1,19 @@
-*{
-    text-align: center;
+* {
+  text-align: center;
 }
 
-
-
-
-button{
-    width: 150px;
-    height: 30px;
-    border: none;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px, 
-                rgba(0, 0, 0, 0.14) 0px 2px 4px -1px, 
-                rgba(0, 0, 0, 0.12) 0px 1px 1px -1px;
-    font-size: larger;
+button {
+  width: 150px;
+  height: 30px;
+  color: #333;
+  border: none;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.14) 0px 2px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 1px -1px;
+  font-size: larger;
+  margin-bottom: 35px;
+}
+hr{
+  border: solid rgb(205, 203, 203) 0.0000001rem;
+  width: 70%;
 }

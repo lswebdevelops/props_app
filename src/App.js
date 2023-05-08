@@ -3,19 +3,24 @@ import React from "react";
 import Jokes from "./Components/Jokes";
 import jokesData from "./Data/jokesData";
 
- function App() {
+function App() {
   const jokeElements = jokesData.map((joke) => {
     return (
-      <Jokes 
-      setup={joke.setup} 
-      key={joke.id} 
-      punchline={joke.punchline}
-      changeIcon={joke.changeIcon}
-       />
+      <Jokes
+        setup={joke.setup}
+        key={joke.id}
+        punchline={joke.punchline}
+        changeIcon={joke.changeIcon}
+      />
     );
   });
 
-  return <div>{jokeElements}</div>;
+  return (
+    <div>
+      {jokeElements}
+     
+    </div>
+  );
 }
 
 export default App;
