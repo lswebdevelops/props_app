@@ -1,19 +1,23 @@
 import '../Styles/Jokes.css';
 import React from 'react';
-class Jokes extends React.Component{
-  render(){
+
+function Jokes(props) {
+  const [isShown, setIsShown] = React.useState(false);
+
+  function toggleShown() {
    
-    const { setup, punchline} = this.props;
-    return(
-      <div>
-        {/* if setup exists, so is truffy */}
-        {setup && <h1 
-        style={{display: setup ? "block": "none"}}>{setup}</h1>}
-        {punchline && <p
-         style={{display:punchline ? "block": "none"}}>{punchline}</p>}
-         <hr />
-      </div>
-    )
+    setIsShown(prevShown => !prevShown)
   }
+
+  return (
+    <div>
+      <h3>{props.setup}</h3>
+      <div>
+        <button onClick={toggleShown}>Show punchline</button>
+        {isShown && <p>{props.punchline}</p>}
+      </div>
+    </div>
+  );
 }
+
 export default Jokes;

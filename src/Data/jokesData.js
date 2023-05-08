@@ -1,4 +1,4 @@
-export default [
+const jokes = [
     {
         id: 1,
       setup: "I got my daughter a fridge for her birthday",
@@ -30,3 +30,4 @@ export default [
     }
   ]
   
+  export default jokes;
