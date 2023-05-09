@@ -26,7 +26,7 @@ function Jokes(props) {
         {isShown  &&  <button onClick={toggleShown}><FaRegEyeSlash /> </button>} */}
 {/* now using ternary:  */}
 
-        {/* <button onClick={toggleShown}>{isShown ? "Hide": "Show"} Punchline</button> */}
+        <button onClick={toggleShown}>{isShown ? "Hide": "Show"} Punchline</button>
 
       </div>
       <hr />
