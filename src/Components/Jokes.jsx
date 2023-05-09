@@ -14,9 +14,20 @@ function Jokes(props) {
       {props.setup && <h3>{props.setup}</h3>}
       <div>
         {isShown && <p>{props.punchline}</p>}
-        <button onClick={toggleShown}>
-          {isShown ? <FaRegEyeSlash /> : <FaRegEye />}
-        </button>
+ 
+        <button 
+        onClick={toggleShown}>
+          {isShown ? <FaRegEyeSlash /> : <FaRegEye />
+          }
+        </button> 
+  
+        {/* another way but now using &&  */}
+        {/* {!isShown  &&  <button onClick={toggleShown}> <FaRegEye /> </button>}
+        {isShown  &&  <button onClick={toggleShown}><FaRegEyeSlash /> </button>} */}
+{/* now using ternary:  */}
+
+        {/* <button onClick={toggleShown}>{isShown ? "Hide": "Show"} Punchline</button> */}
+
       </div>
       <hr />
     </div>
