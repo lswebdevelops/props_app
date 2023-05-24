@@ -1,42 +1,48 @@
-import React, {useState, useEffect} from "react";
-
+import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [ color, setColor ] = useState('black');
+  const [color, setColor] = useState("black");
+
   useEffect(() => {
-    const changeColorOnClick = () => {
-      if (color === "black") {
-        setColor("red");
-      }else{
-        setColor("black");
-      }
-    };
+    const changeColor =() => {
+      color === "black"? setColor("white"): setColor("black");
+    }
 
-    document.addEventListener("click", changeColorOnClick);
+    document.addEventListener("click", changeColor);
     return() => {
-      document.removeEventListener( "click", changeColorOnClick);
-    };
-  }, [color]);
-  return(
-    <div>
-      <div
-      id="myDiv"
-      style={{
-        color: "white",
-        width: "100px",
-        height: "100px",
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        userSelect: "none",
-        backgroundColor: color,
+      document.removeEventListener("click", changeColor)
+    }
 
-      }}
-      >
-        This div can change color. If you click on it! 
+  }, [color]);
+
+  return(
+    <div
+      style={{
+        textAlign: "center",
+      }}>
+      <div
+        id="myDiv"
+        style={{
+          paddingTop: "30px",
+          color: "white",
+          paddingBottom: "0",
+          width: "100px",
+          height: "100px",
+          position: "absolute",
+          left: "50px",
+          top: "50px",
+          // padding: "10px",
+          userSelect: "none",
+          color: color,
+          backgroundColor: "green",
+        }}
+        >
+        Click me for changing
       </div>
     </div>
   )
+
+
 }
 
 export default App;
