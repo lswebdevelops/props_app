@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 const App = () => {
   const [ color, setColor ] = useState('black');
   useEffect(() => {
-    const chageColorOnClick = () => {
+    const changeColorOnClick = () => {
       if (color === "black") {
         setColor("red");
       }else{
@@ -12,9 +12,9 @@ const App = () => {
       }
     };
 
-    document.addEventListener("click", chageColorOnClick);
+    document.addEventListener("click", changeColorOnClick);
     return() => {
-      document.removeEventListener( "click", chageColorOnClick);
+      document.removeEventListener( "click", changeColorOnClick);
     };
   }, [color]);
   return(
@@ -28,6 +28,7 @@ const App = () => {
         position: "absolute",
         left: "50%",
         top: "50%",
+        userSelect: "none",
         backgroundColor: color,
 
       }}
