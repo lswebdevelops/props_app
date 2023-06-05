@@ -23,3 +23,9 @@
     border-radius: 5%;
   }
   
+  .counter-div{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: solid firebrick 1px;
+    }
